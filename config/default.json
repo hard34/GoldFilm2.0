@@ -1,0 +1,12 @@
+{
+	"PORT": 9000,
+	"DATABASE_CONNECTION_URL": "mongodb://localhost:27017/auth-kino",
+	"ACCESS_SECRET": "rto9gHHXdNxa3JnF2k",
+	"REFRESH_SECRET": "ugaQZnHSnJs5ds900u",
+	"CLIENT_URL": ["http://localhost:3000", "mongodb+srv://derbin399:hard34@kino-cite.kmqvdww.mongodb.net/?retryWrites=true&w=majority&appName=kino-cite"],
+	"API_URL": "http://localhost:9000/api",
+	"MAIL_HOST": "smtp.gmail.com",
+	"MAIL_PORT": 587,
+	"MAIL_AUTH_USER": "derbin399@gmail.com",
+	"MAIL_AUTH_PASSWORD": "wbij euiu pdtg kswm"
+}

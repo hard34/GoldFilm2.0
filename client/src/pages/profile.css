@@ -1,0 +1,293 @@
+.profile-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+  color: var(--app-color);
+  margin: 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.profile-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.profile-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--app-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.profile-section h2 {
+  color: var(--app-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.profile-section p {
+  color: #ffffff;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Место для кнопки */
+  border: 1px solid var(--app-color);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--app-color);
+  font-size: 16px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  color: var(--app-color);
+  transition: opacity 0.3s ease;
+}
+
+.password-toggle:hover {
+  opacity: 0.8;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: 1px solid var(--app-color);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--app-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-buttons button:hover {
+  background-color: var(--app-color);
+  color: rgb(4, 0, 46);
+}
+
+/* Стили для кнопки изменения пароля */
+.change-password-button {
+  padding: 10px 20px;
+  border: 1px solid var(--app-color);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--app-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.change-password-button:hover {
+  background-color: var(--app-color);
+  color: rgb(4, 0, 46);
+}
+
+.watched-movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.movie-card {
+  width: 300px;
+  height: 500px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 1px #262626 solid;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  color: #ffffff;
+  margin: 1rem;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 1rem;
+}
+
+.movie-card p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  border: 1px solid #ff4444;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.recent-slider {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.recent-slider-container {
+  display: flex;
+  gap: 20px;
+  min-width: 0;
+}
+
+.recent-slider .movie-card {
+  flex: 0 0 360px;
+}
+
+.recent-slider::-webkit-scrollbar {
+  height: 10px;
+}
+
+.recent-slider::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 5px;
+}
+
+.profile-slider {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .profile-section {
+    max-width: 95%;
+  }
+  
+  .profile-slider {
+    max-width: 100%;
+  }
+
+  .movie-card {
+    width: 240px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .profile-section {
+    padding: 1rem;
+  }
+  
+  .profile-slider {
+    max-width: 100%;
+  }
+
+  .movie-card {
+    width: 220px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 0.8rem;
+  }
+  
+  .profile-slider {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 0.5rem;
+  }
+  
+  .profile-slider {
+    max-width: 100%;
+  }
+
+  .movie-card {
+    width: 240px;
+    height: 420px;
+  }
+} 

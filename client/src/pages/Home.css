@@ -1,0 +1,11 @@
+.home {
+  padding: 20px 0;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+ 
+@media (max-width: 768px) {
+  .home {
+    padding: 10px 0;
+  }
+} 

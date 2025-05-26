@@ -1,0 +1,133 @@
+.search-results-page {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+  padding: 32px 16px 16px 16px;
+}
+
+.search-results-page h1 {
+  color: #ffd700;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.search-films-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.search-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.search-pagination button {
+  background: #222;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px;
+}
+
+.search-pagination button.active,
+.search-pagination button:hover {
+  background: #ffd700;
+  color: #222;
+  transform: translateY(-2px);
+}
+
+.search-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.search-loading, 
+.search-error {
+  color: #ffd700;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Адаптивность для страницы поиска */
+@media (max-width: 1024px) {
+  .search-results-page {
+    max-width: 900px;
+  }
+
+  .search-films-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-results-page {
+    max-width: 600px;
+    padding: 0 12px;
+  }
+
+  .search-results-page h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .search-films-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .search-pagination {
+    gap: 6px;
+  }
+
+  .search-pagination button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-results-page {
+    padding: 0 8px;
+  }
+
+  .search-results-page h1 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .search-films-grid {
+    grid-template-columns: repeat(1, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .search-pagination {
+    gap: 4px;
+  }
+
+  .search-pagination button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    min-width: 32px;
+  }
+
+  .search-loading, 
+  .search-error {
+    font-size: 1rem;
+    margin: 20px 0;
+    padding: 15px;
+  }
+} 
